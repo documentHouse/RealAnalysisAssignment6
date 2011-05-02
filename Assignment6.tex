@@ -128,14 +128,31 @@ Since all of the terms in the series are positive we will have shown the converg
 So the bounding sequence converges which provides the bound for $\sum a_n$.
 
 
-
+\newpage
 \vspace{15pt}
 \begin{flushleft} 
 \textbf{Class 18.100B} - Problem 4\\
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
+We need to show that the convergence of $\sum a_n$ implies the convergence $\sum \frac{\sqrt{a_n}}{n}$ given that $a_n \ge 0$. We can use the Cauchy-Schwarz inequality for series which comes from Rudin:
+\begin{equation}
+|\sum_i^n x_i y_i|^2 \le \sum_j^n | x_j |^2 \sum_k^n | y_k |^2 \label{eqn:seriescs}
+\end{equation}
 
+\noindent We also note that if $1 \le n$ we have $n \le n^2 \implies \sqrt{n} \le n \implies \frac{1}{n} \le \frac{1}{\sqrt{n}} $.
+
+\noindent Using equation (\ref{eqn:seriescs}) and letting $x_i = \sqrt{a_i}$ and $y_i = 1$ we derive the following:
+\[  | \sum_i^n \sqrt{a_i} |^2   = \sum_j^n | \sqrt{a_j} |^2 \sum_n^k | 1 |^2  = (\sum_j^n a_j)(n)  \]
+This allows us to derive
+\begin{eqnarray*}
+ \frac{1}{n} | \sum_i^n \sqrt{a_i} |^2  &=& \sum_j^n a_j \\
+ \implies  | \sum_i^n \frac{\sqrt{a_i}}{\sqrt{n}} |^2  &=& \sum_j^n a_j \\
+ \implies \sum_j^n a_j &=& | \sum_i^n \frac{\sqrt{a_i}}{\sqrt{n}} |^2  >  | \sum_i^n \frac{\sqrt{a_i}}{n} |^2 \\
+ \implies \sqrt{\sum_j^n a_j} &>& \sum_i^n \frac{\sqrt{a_i}}{n}
+\end{eqnarray*}
+
+\noindent Since $\sum_j a_j$ converges it provides a bound on $\sum_i \frac{\sqrt{a_i}}{n}$. Since the terms of the series are positive it is monotone increasing and since it is bounded the series must converge.
 
 \vspace{15pt}
 \begin{flushleft} 
