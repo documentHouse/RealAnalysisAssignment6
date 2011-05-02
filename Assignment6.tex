@@ -148,8 +148,8 @@ This allows us to derive
 \begin{eqnarray*}
  \frac{1}{n} | \sum_i^n \sqrt{a_i} |^2  &=& \sum_j^n a_j \\
  \implies  | \sum_i^n \frac{\sqrt{a_i}}{\sqrt{n}} |^2  &=& \sum_j^n a_j \\
- \implies \sum_j^n a_j &=& | \sum_i^n \frac{\sqrt{a_i}}{\sqrt{n}} |^2  >  | \sum_i^n \frac{\sqrt{a_i}}{n} |^2 \\
- \implies \sqrt{\sum_j^n a_j} &>& \sum_i^n \frac{\sqrt{a_i}}{n}
+ \implies \sum_j^n a_j &=& | \sum_i^n \frac{\sqrt{a_i}}{\sqrt{n}} |^2  \ge  | \sum_i^n \frac{\sqrt{a_i}}{n} |^2 \\
+ \implies \sqrt{\sum_j^n a_j} &\ge& \sum_i^n \frac{\sqrt{a_i}}{n}
 \end{eqnarray*}
 
 \noindent Since $\sum_j a_j$ converges it provides a bound on $\sum_i \frac{\sqrt{a_i}}{n}$. Since the terms of the series are positive it is monotone increasing and since it is bounded the series must converge.
@@ -159,6 +159,8 @@ This allows us to derive
 \textbf{Class 18.100B} - Problem 5\\
 \rule{500pt}{1pt}\\
 \end{flushleft} 
+
+
 
 
 \vspace{15pt}
