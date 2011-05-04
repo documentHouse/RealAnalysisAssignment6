@@ -20,7 +20,7 @@
 
 \title{Real Analysis $\mathbb{I}$: \\ Assignment 6}
 \author{Andrew Rickert}
-\date{Started: April 29, 2011 \\ \hspace{1pt} Ended: April ??  2011}                                           % Activate to display a given date or no date
+\date{Started: April 29, 2011 \\ \hspace{1pt} Ended: May 4,  2011}                                           % Activate to display a given date or no date
 
 \begin{document}
 \maketitle
@@ -160,8 +160,22 @@ This allows us to derive
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
+We need to show that if $\sum a_n$ converges then we also have $\lim_{n \to \infty} na_n = 0$. First we derive an important inequality. Since $a_1 \ge a_2 \ge ...$ we have 
+\[ \sum_{k = m}^n a_k \ge \sum_{k = m}^n a_n = (n-m+1)a_n \] 
+If we now let $n = 2n$ and  $m = n+1$ we have 
+\begin{equation}
+ \sum_{k = n+1}^{2n} a_k \ge (2n - (n+1) + 1)a_{2n} =  na_{2n} \label{eqn:convinequality}
+\end{equation}
 
+ Because $\sum a_n$ converges the series satisfies the cauchy convergence criterion. So, for $\epsilon$ there is an $N$ such that for $m,n > N$ 
+\[ |\sum_m^n a_n| < \epsilon \]
+If we let $m = 2n$ and since $n >N$ we have $n+1 > N$ so  
+\[ |\sum_{n+1}^{2n} a_n| < \epsilon \]
+By the inequality in equation $(\ref{eqn:convinequality})$ we have for $n > N$
 
+\[ |na_n| <  |\sum_{n+1}^{2n} a_n| < \epsilon \]
+
+\noindent This shows that $\lim_{n \to \infty} na_n = 0$.
 
 \vspace{15pt}
 \begin{flushleft} 
@@ -176,13 +190,15 @@ This allows us to derive
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
+To show that $\lim_{h \to 0} |f(x+h) - f(x-h)| = 0$ does not imply continuity we pick a function with a removable discontinuity.\\
+\indent Let $f = x$ for $x \neq 0$ and $f = 1$ for $x = 0$. At a given $x$ we have $|f(x+h) - f(x-h)| = |x+h - (x-h)| = |2h|$ and $\lim_{h \to 0} |h| = 0$ so our function satisfies the hypothesis of the theorem. Continuity requires that $\lim_{x \to 0}f(x) = f(0)$ and since $\lim_{x \to 0}f(x)  = 0 \neq 1 = f(0)$ the function is not continuous which provides the counterexample.
 
-\indent 
-\vspace{15pt}
-\begin{flushleft} 
-\textbf{Class 18.100B} - Extra Problem 1\\
-\rule{500pt}{1pt}\\
-\end{flushleft} 
+
+%\vspace{15pt}
+%\begin{flushleft} 
+%\textbf{Class 18.100B} - Extra Problem 1\\
+%\rule{500pt}{1pt}\\
+%\end{flushleft} 
 
 
 \end{document}  
